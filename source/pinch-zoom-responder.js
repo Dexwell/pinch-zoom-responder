@@ -59,7 +59,13 @@ export class PinchZoomResponder {
   }
 
   onResponderGrant (e) {
+
+    if (this.responders.onResponderGrant) {
+      return this.responders.onResponderGrant(e)
+    }
+
     this.updateTouchState(e)
+
   }
 
   updateTouchState (e) {
@@ -101,10 +107,21 @@ export class PinchZoomResponder {
   }
 
   onResponderRelease (e) {
-    this.updateTouchState(e)
+
+    if (this.responders.onResponderRelease) {
+      return this.responders.onResponderRelease(e)
+    }
+
+    this.updateTouchState(e);
+
   }
 
   onResponderTerminate (e) {
+
+    if (this.responders.onResponderTerminate) {
+      return this.responders.onResponderTerminate(e)
+    }
+
   }
 
   storeCenter (e) {
