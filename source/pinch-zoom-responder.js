@@ -60,11 +60,11 @@ export class PinchZoomResponder {
 
   onResponderGrant (e) {
 
+    this.updateTouchState(e)
+
     if (this.responders.onResponderGrant) {
       return this.responders.onResponderGrant(e)
     }
-
-    this.updateTouchState(e)
 
   }
 
@@ -108,11 +108,11 @@ export class PinchZoomResponder {
 
   onResponderRelease (e) {
 
+    this.updateTouchState(e)
+
     if (this.responders.onResponderRelease) {
       return this.responders.onResponderRelease(e)
     }
-
-    this.updateTouchState(e);
 
   }
 

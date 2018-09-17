@@ -1,6 +1,6 @@
 {
   "name": "react-native-pinch-zoom-responder",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A React Native gesture responder to recognize pinch and zoom ",
   "main": "./source/index.js",
   "scripts": {
